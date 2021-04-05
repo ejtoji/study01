@@ -26,7 +26,6 @@ title.addEventListener("click", handleClick);
 
 //if else
 //const age = prompt("How old are you?");
-
 if(age >= 18 && age < 21){
     console.log("18~21 you can drink")
 } else if(age > 21){
@@ -35,7 +34,11 @@ if(age >= 18 && age < 21){
     console.log("18미만 too young")
 }
 
-consst baseColor = "#3"
+
+
+
+
+
 
 
 
