@@ -17,3 +17,12 @@ body {background:#ddd}
 .button02.clicked {background:#000;color:#fff}
 
 
+.form,
+.greetings {
+  display: none;
+}
+.showing {
+  display: block;
+}
+
+
