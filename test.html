@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //0. var, const, let
+
+        //문자,숫자
+        alert(typeof "1")
+        alert(typeof 1)
+
+        //Math
+        Math.round(10.6); //반올림
+        Math.ceil(10.2);  //올림
+        Math.floor(10.6); //버림
+        Math.random();    //랜덤
+
+        //1. if else
+        const id = prompt("아이디를 입력해주세요");
+        const pw = prompt("비밀번호를 입력해주세요");
+        if ((id==='aa' || id==='bb' || id==='cc') && pw === '12345'){
+            alert('로그인 완료');
+        } else {
+            alert('로그인 못혀')
+        }
+
+        //2. while 
+        let i = 0;
+        while(i < 3){
+            document.write('while돌리기 0 1 2 돌리기')
+            i ++;
+        }
+
+        //3.for문
+        for (let i =0; i < 10; i++){
+            if( i === 5){
+                break; //5에서 멈춤
+                continue; // 5빼고 지속
+            }
+        }
+
+        //4. for - 중첩
+        for(let i = 0; i < 10; i++){
+            for(let j = 0; j < 10; j++){
+                document.write(`중첩 ${i} ${j} <br>`)
+            }
+        }
+
+
+        //5. 함수
+        function get_argument(arg1, arg2){
+            return arg1 + arg2;
+        }
+        console.log(get_argument(1, 30));
+
+        //6. 배열
+        let array = ['a', 'b', 'c'];
+        console.log(array[1]);
+
+        array.length; //배열 길이
+        array.push('f'); //뒤에 붙여넣기
+        array.concat(['f', 'g']); //배열 합치기
+        array.unshift('a'); //배열 앞에 붙여넣기
+        array.splice(1, 0, 'c'); //(index. howmany, element)
+
+        array.shift() //앞 배열 삭제
+        array.pop() //뒤 배열 삭제
+        array.reverse()  //정렬 역순
+        array.sort(a, b) //비교, 1,0,-1반환
+
+        
+        const grades = {
+        'aaa' : 1,
+        'bbb' : 2,
+        'ccc' : 3
+        }
+        
+        for(name in grades) {
+            document.write(`<li>${name} : ${grades[name]}</li>`)
+        }
+       
+        const gradesObject = {
+            'list' : {'ddd' : 3, 'ccc' : 5, 'ttt' : 23},
+            'show' : function(){
+                for(let name in this.list) {
+                    document.write(`${name} : ${this.list[name]} <br>`);
+                }
+            }
+        }
+        console.log(gradesObject.list)
+        console.log(gradesObject['list'])
+        gradesObject.show();
+
+        //모듈 
+        //라이브러리
+    </script>
+</body>
+</html>

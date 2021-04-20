@@ -1,32 +1,6 @@
-<<<<<<< HEAD
-const todoForm = document.querySelector(".js-todoform");
-const todoInput = todoForm.querySelector(".todoinput");
-const todoList = document.querySelector(".js-todolist");
-
-const list_LS = "todolist";
-
-const todos = [];
-
-function paintTodo(text){
-    //console.log(text)
-    const list = document.createElement("li");
-    const delbtn = document.createElement("button");
-    const span = document.createElement("span");
-    delbtn.value = "close";
-    span.innerText = text;
-    list.appendChild(span);
-    list.appendChild(delbtn);
-    todoList.appendChild(list);
-    const todoObj = {
-        text : text,
-        id : todos.length + 1
-    }
-    todos.push(todoObj);
-=======
 const toDoForm = document.querySelector(".js-toDoForm");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector(".js-toDoList");
-
 const TODOS_LS = "toDos";
 let toDos = [];
 
@@ -34,10 +8,9 @@ function deleteTodo(event){
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
-
     const cleanToDos = toDos.filter(function(toDo){
-        console.log(toDo.id);
-        //return toDo.id !== parseInt(li.id);
+        //console.log(toDo.id, li.id);
+        return toDo.id !== parseInt(li.id);
     })
     //console.log(cleanToDos);
     toDos = cleanToDos;
@@ -72,29 +45,10 @@ function paintToDo(text){
 
     //btn del
     delbtn.addEventListener("click", deleteTodo);
->>>>>>> AE120505
 }
 
 function handleSumit(event){
     event.preventDefault();
-<<<<<<< HEAD
-    const currentValue = todoInput.value;
-    paintTodo(currentValue);
-}
-
-function lodeTodo(){
-    const toDos = localStorage.getItem(list_LS);
-    if(toDos === null) {
-        
-    } 
-}
-
-function init2(){
-    lodeTodo();
-    todoForm.addEventListener("submit", handleSumit)
-}
-init2();
-=======
     const currentValue = toDoInput.value;
     paintToDo(currentValue);
     toDoInput.value = "";
@@ -121,5 +75,3 @@ function init(){
 }
 init();
 
-
->>>>>>> AE120505

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    </ul>
+    <script>
+        //객체 object key : value  ***객체 다시보기!!!
+
+
+
+        const grades = {
+            'egoing' : 10,
+            'k88' : 6,
+            'sori' : 8,
+        }
+        console.log(grades.egoing);
+        console.log(grades['k88']);
+
+        const grades1 = {
+            'aa' : 10,
+            'bb' : 6,
+            'cc' : 8,
+        }
+        for(key in grades1) {
+            document.write("key : "+key+" value : "+grades1[key]+"<br />");
+            
+        }
+
+        
+
+        var grades = {
+            'list': {'egoing': 10, 'k8805': 6, 'sorialgi': 80},
+            'show' : function(){
+                for(var name in this.list){
+                    document.write(name+':'+this.list[name]+"<br />");
+                }
+            }
+        };
+        grades.show();
+
+
+        const grades = {
+            'aaa' : 1,
+            'bbb' : 2,
+            'ccc' : 3,
+        }
+        console.log(grades.aaa);
+        console.log(grades['bbb']);
+
+        for(let name in grades){
+            document.write(`<li>${name} : ${grades[name]}</li>`)
+        }
+
+
+        function updateList() {
+        let listHtml = '';
+        for (const data of userDataList) {
+            listHtml += `<li>${data.id} : ${data.name}</li>`;
+        }
+        document.querySelector('.user_list').innerHTML = listHtml;
+        }
+
+
+
+        //모듈 : 작은 부품
+        //라이브러리 : 자주사용하는 로직을 재사용 편리. 코드의 집합, jquery api사용설명서
+        </script>
+
+
+</body>
+</html>

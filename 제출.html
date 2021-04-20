@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+
+const userDataList = [
+  { id: 2, name: '곰' },
+  { id: 10, name: '여우' },
+  { id: 4, name: '사자' },
+  { id: 29, name: '기린' },
+  { id: 101, name: '호랑이' }
+];
+
+const userList = {
+  'list' : { id: 2, name: '곰' }
+}
+
+for(let data of userDataList){
+    console.log(data.id + data.name);
+}
+
+
+const grades = {
+        'aaa' : 1,
+        'bbb' : 2,
+        'ccc' : 3
+}
+
+for(let key in grades){
+    console.log(key + grades[key]);
+}
+
+
+
+</script>
+
+</body>
+</html>
